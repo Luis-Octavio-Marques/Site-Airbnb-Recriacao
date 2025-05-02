@@ -1,18 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+function Header() {
   return (
     <div className="flex items-center justify-around py-4 shadow-md">
-      <div className="flex items-center">
-        <img
-          className="h-10"
-          src="https://cdn.prod.website-files.com/61b9e0dd381626819c8d4f83/65e2198d48039ba6444f602b_logo%20hashtag%20-%20h.webp"
-          alt="logo da Hashtag"
-        />
-        <p className="text-primary-400 text-2xl font-bold"> ashBnB </p>
-      </div>
+      <Link to="/">
+        <div className="flex cursor-pointer items-center">
+          <img
+            className="h-10"
+            src="https://cdn.prod.website-files.com/61b9e0dd381626819c8d4f83/65e2198d48039ba6444f602b_logo%20hashtag%20-%20h.webp"
+            alt="logo da Hashtag"
+          />
+          <p className="text-primary-400 text-2xl font-bold"> ashBnB </p>
+        </div>
+      </Link>
 
-      <div className="boder flex items-center rounded-4xl border-gray-300 px-5 py-2 shadow-md">
+      <div className="boder rounded-4xl hidden items-center border-gray-300 px-5 py-2 shadow-md lg:flex">
         {" "}
         <p className="border-r border-r-gray-300 pr-4"> Qualquer Lugar </p>
         <p className="border-r border-r-gray-300 px-4"> Qualquer Semana </p>
@@ -35,7 +38,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="boder flex items-center rounded-4xl border-gray-300 px-5 py-2 shadow-md gap-2">
+      <div className="boder rounded-4xl flex items-center gap-2 border-gray-300 px-5 py-2 shadow-md">
         {" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -63,10 +66,10 @@ const Header = () => {
             clipRule="evenodd"
           />
         </svg>
-        <p> Diego XYZ </p>
+        <p className="max-w-15 truncate sm:max-w-32"> Diego XYZ </p>
       </div>
     </div>
   );
-};
+}
 
 export default Header;
